@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liquid Text Animation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="liquid-container">
+    <h1 class="liquid-text">Flow</h1>
+  </div>
+
+  <!-- SVG Filter for Liquid Effect -->
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+      <filter id="liquid-filter">
+        <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="30" />
+      </filter>
+    </defs>
+  </svg>
+</body>
+</html>
